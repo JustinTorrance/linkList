@@ -8,15 +8,15 @@ var cardSection = document.querySelector('.card-section');
 enterButton.addEventListener('click', createCard);
 
 function createCard() {
-  cardSection.innerHTML = (`  
+  var newCard = cardSection.innerHTML = (`  
     <section class="card-section">
     <section class="card">
       <article class="card-title-article">
-        <h1 class="card-website-title" ${websiteTitleInput.value}></h1>
+        <h1 class="card-website-title">${websiteTitleInput.value}</h1>
       </article>
 
       <article class="card-url-article">
-        <p class="card-url" ${urlInput.value}></p>
+        <p class="card-url">${urlInput.value}</p>
       </article>
 
       <article class="read-delete-article">
@@ -25,4 +25,5 @@ function createCard() {
       </article>
     </section>
   </section>`);
+  newCard.appendChild();
 }
