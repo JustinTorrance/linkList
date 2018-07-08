@@ -1,9 +1,9 @@
 body {
-
+  font-family: 'Open Sans', sans-serif;
 }
 
 .header {
-
+  color: #ffffff;
 }
 
 .image {
@@ -11,7 +11,7 @@ body {
 }
 
 main {
-
+ background-color: #455a64;
 }
 
 .title-section {
@@ -35,26 +35,39 @@ main {
 }
 
 .button-enter {
+  background-color: #ffc107;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+}
 
+.button-enter:hover {
+  background-color: #ffd773;
+  color: #ffffff;
 }
 
 .card-section {
-
+  background-color: #cfd8dc;
+  height: 100vh;
 }
 
 .card {
-
+  background-color: #ffffff;
+  border-color: #607d8b;
 }
 
 .card-title-article {
+  color: #455a64;
+  font-weight: bold 800;
 
 }
 
 .card-website-title {
-
+  color: #455a64;
 }
 
 .card-url-article {
+  border: 10px 0px 10px 0px solid;
+  border-color: #cfd8dc;
 
 }
 
@@ -75,4 +88,9 @@ main {
 }
 
 
+.read-class-change {
+  border: 10px solid;
+  font-style: italic;
+  color: red;
+}
 
