@@ -4,8 +4,9 @@ var enterButton = document.querySelector('.button-enter');
 var cardWebsiteTitle = document.querySelector('.card-website-title');
 var cardURL = document.querySelector('.card-url');
 var cardSection = document.querySelector('.card-section');
-var read = document.querySelector('button-read')
-var delete = document.querySelector('.button-delete')
+var read = document.querySelector('.button-read');
+var deleteButton = document.querySelector('.button-delete');
+var addClass = document.querySelector('.add-class');
 
 enterButton.addEventListener('click', createCard);
 
@@ -30,3 +31,7 @@ function createCard() {
   </section>`);
   cardSection.appendChild(newCard);
 }
+
+addClass.addEventListener('click', function() { 
+  button-read.classList.add('read-class-change');
+});
