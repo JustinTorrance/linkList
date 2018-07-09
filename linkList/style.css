@@ -1,0 +1,113 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  color: #ffffff;
+}
+
+.image {
+
+}
+
+main {
+ background-color: #455a64;
+}
+
+.title-section {
+
+}
+
+.website-title-input {
+
+}
+
+.url-section {
+
+}
+
+.url-input {
+
+}
+
+.enter-button-section {
+
+}
+
+.button-enter {
+  background-color: #ffc107;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.button-enter:hover {
+  background-color: #ffd773;
+  color: #ffffff;
+}
+
+.card-section {
+  background-color: #cfd8dc;
+  height: 100vh;
+  padding: 1em;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 2px solid #607d8b;
+  border-color: #607d8b;
+  margin: 0 auto 1em;
+  padding: 1em 1em 1em 1em;
+  width: 25em;
+}
+
+.card-title-article {
+  color: #455a64;
+  font-weight: bold 800;
+
+
+}
+
+.card-website-title {
+  color: #455a64;
+  font-size: 1em;
+}
+
+.card-url-article {
+  border-top: .15em solid #cfd8dc;
+  border-bottom: .15em solid #cfd8dc;
+}
+
+.card-url {
+  color: #607d8b;
+
+}
+
+.read-delete-article {
+  margin:;
+
+}
+
+.button-read {
+  border-radius: none;
+
+}
+
+.button-delete {
+
+}
+
+.card-read-class-change {
+  background-color: #f2f4f4;
+}
+
+.read-class-change {
+  border: 10px solid;
+  font-style: italic;
+  color: red;
+}
+
+.read-background-class-change {
+
+}
+
+
