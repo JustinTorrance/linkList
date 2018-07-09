@@ -15,19 +15,19 @@ cardInformation.addEventListener('click', function(event) {
   console.log('hello')
   var clickedButton = event.target;
   // console.log(event.target);
-  var li = event.target.parentNode;
+  var article = event.target.parentNode;
 
   if (clickedButton.className === 'button-read') {
     console.log('hello')
     clickedButton.classList.add('read-class-change')
-    li.classList.add('card-read-class-change');
+    article.classList.add('card-read-class-change');
   }
 });
 
 function createCard() {
   var title = websiteTitleInput.value;
   var url = urlInput.value;
-  var newCard = document.createElement("li");
+  var newCard = document.createElement("article");
   // if (websiteTitleInput.value = " ") {
   //   alert("You must enter a valid website title and url")
   // } else {
