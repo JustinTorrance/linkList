@@ -15,14 +15,32 @@ cardInformation.addEventListener('click', function(event) {
   console.log('hello')
   var clickedButton = event.target;
   // console.log(event.target);
-  var article = event.target.parentNode;
+  var article = event.target.parentNode.parentNode;
 
   if (clickedButton.className === 'button-read') {
     console.log('hello')
     clickedButton.classList.add('read-class-change')
     article.classList.add('card-read-class-change');
+  } else {
+    clickedButton.classList.remove('read-class-change')
+    article.classList.remove('card-read-class-change');
   }
 });
+
+
+cardInformation.addEventListener('click', function(event) {
+  console.log('hello')
+  var clickedButton = event.target;
+  // console.log(event.target);
+  var article = event.target.parentNode;
+
+  if (clickedButton.className === 'button-delete') {
+    console.log('delete this bitch')
+    cardSection.removeChild(cardInformation)
+    ;
+  } 
+});
+
 
 function createCard() {
   var title = websiteTitleInput.value;
@@ -47,6 +65,27 @@ function createCard() {
   </section>`);
   cardInformation.appendChild(newCard);
 };
+
+
+// CLEAR ALL
+// enterButton.addEventListener('click', createCard);
+// cardInformation.addEventListener('click', function(event) {
+//   console.log('hello')
+//   var clickedButton = event.target;
+//   // console.log(event.target);
+//   var article = event.target.parentNode;
+
+//   if (clickedButton.className === 'button-delete') {
+//     console.log('delete this bitch')
+//     cardSection.removeChild(cardInformation)
+//     ;
+//   } 
+// });
+
+
+// addClass.addEventListener('click', function() { 
+//   button-read.classList.add('read-class-change');
+// });
 
 
 

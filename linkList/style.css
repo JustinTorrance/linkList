@@ -4,6 +4,7 @@ body {
 
 .header {
   color: #ffffff;
+  font-size: 2em;
 }
 
 .image {
@@ -12,13 +13,19 @@ body {
 
 main {
  background-color: #455a64;
+ display: block;
+ float: left;
+
+
 }
 
 .title-section {
+  padding: 1em 1em 1em 1em;
 
 }
 
 .website-title-input {
+  padding: 1em 1em 1em 1em;
 
 }
 
@@ -27,6 +34,7 @@ main {
 }
 
 .url-input {
+  padding: 1em 1em 1em 1em;
 
 }
 
@@ -47,6 +55,7 @@ main {
 
 .card-section {
   background-color: #cfd8dc;
+  float: right;
   height: 100vh;
   padding: 1em;
 }
@@ -56,20 +65,21 @@ main {
   border: 2px solid #607d8b;
   border-color: #607d8b;
   margin: 0 auto 1em;
-  padding: 1em 1em 1em 1em;
+  padding: 0em 2em 1em 1.5em;
   width: 25em;
 }
 
 .card-title-article {
+  box-sizing: border-box;
   color: #455a64;
-  font-weight: bold 800;
-
-
 }
 
 .card-website-title {
   color: #455a64;
-  font-size: 1em;
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: .75em;
+  text-underline-position: 
 }
 
 .card-url-article {
@@ -79,20 +89,24 @@ main {
 
 .card-url {
   color: #607d8b;
+  font-weight: 400;
 
 }
 
 .read-delete-article {
-  margin:;
+  padding: .5em 0em .5em 0em;
+  
 
 }
 
 .button-read {
   border-radius: none;
+  float: left;
 
 }
 
 .button-delete {
+  float: right;
 
 }
 
