@@ -8,8 +8,13 @@ var read = document.querySelector('.button-read');
 // var deleteButton = document.querySelector('.button-delete');
 // var addClass = document.querySelector('.add-class');
 var cardInformation = document.querySelector('.card-information')
-
-urlInput.addEventListener('keyup', enterButton);
+var counter = 0;
+var readCounter = 0;
+var totalBookmarks = document.querySelector('.total-bookmarks');
+var totalReadBookmarks = document.querySelector('.total-read-bookmarks');
+var bookmarkCounters = document.querySelector('.bookmark-counters');
+var readCounters = document.querySelector('.read-counters')
+// urlInput.addEventListener('keyup', enterButton);
 
 enterButton.addEventListener('click', createCard);
 cardInformation.addEventListener('click', function(event) {
@@ -18,17 +23,25 @@ cardInformation.addEventListener('click', function(event) {
   // console.log(event.target);
   var article = event.target.parentNode.parentNode;
 
-  if (clickedButton.className === 'button-read') {
+  if (clickedButton.className === 'button-read' && !article.classList.contains('card-read-class-change')) {
     console.log('hello')
     clickedButton.classList.add('read-class-change')
     article.classList.add('card-read-class-change');
-  } else {
-    clickedButton.classList.remove('read-class-change')
+    readCounter++;
+    increaseReadCounter();
+  } else if (clickedButton.className === 'button-read' && article.classList.contains('card-read-class-change')) {
+    clickedButton.classList.remove('read-class-change');
     article.classList.remove('card-read-class-change');
-  };
-  
-  if (clickedButton.className === 'button-delete') {
+    readCounter--;
+    decreaseReadCounter()
+  } else if (clickedButton.className === 'button-delete') {
+    if (article.classList.contains('card-read-class-change')) {
+      readCounter--;
+      decreaseReadCounter();
+    } 
     article.remove();
+    counter--;
+    decreaseCounter();
 };
 })
 
@@ -46,14 +59,30 @@ cardInformation.addEventListener('click', function(event) {
 //   } 
 // });
 
+websiteTitleInput.addEventListener('keyup', enableEnter);
+urlInput.addEventListener('keyup', enableEnter);
+// enterButton.addEventListener('click', )
+
+function enableEnter() {
+  var inputLength = (websiteTitleInput.value.length * urlInput.value.length);
+  if (inputLength === 0) {
+    enterButton.disabled = true;
+    // window.alert('Please enter a title and URL for your bookmark');
+  } else {
+    enterButton.disabled = false;
+  };
+};
+
+//if websiteTitleInput.value.length > 0 {enterButton.disabled = true;}
 
 function createCard() {
   var title = websiteTitleInput.value;
   var url = urlInput.value;
   var newCard = document.createElement("article");
-  // if (websiteTitleInput.value = " ") {
+  // if (title = " ") {
+  //   enterButton.disabled = true;
   //   alert("You must enter a valid website title and url")
-  // } else {
+  // }; 
   newCard.innerHTML = (`  
     <section class="card">
       <article class="card-title-article">
@@ -69,15 +98,32 @@ function createCard() {
     </section>
   </section>`);
   cardInformation.appendChild(newCard);
+  counter++; 
+  increaseCounter();
 };
 
-
-
-function enableButton() {
-  if (websiteTitleInput.value || urlInput.value = " ") {
-    enterButton.disabled = false;
-  }
+function increaseCounter() {
+  bookmarkCounters.innerHTML = (`<p class="total-counter">Bookmarks: ${counter} </p>`);
 }
+
+function decreaseCounter() {
+  bookmarkCounters.innerHTML = (`<p class="total-counter">Bookmarks: ${counter} </p>`);
+}
+
+function increaseReadCounter() {
+  readCounters.innerHTML = (`<p class="read-counter">Read: ${readCounter} </p>`);
+}
+
+function decreaseReadCounter() {
+  readCounters.innerHTML = (`<p class="read-counter">Read: ${readCounter} </p>`);
+}
+
+
+// function enableButton() {
+//   if (websiteTitleInput.value || urlInput.value = " ") {
+//     enterButton.disabled = false;
+//   }
+// }
 
 
 // CLEAR ALL

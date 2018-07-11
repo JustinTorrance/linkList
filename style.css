@@ -16,18 +16,20 @@ body {
 }
 
 main {
- background-color: #455a64;
+ background-color: #cfd8dc;
  display: flex;
  justify-content: space-evenly;
 }
 
 .input-section {
+  background-color: #455a64;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
+  height: 100vh;
   flex-direction: column;
-  /*margin*/
+
 } 
 
 .title-section {
@@ -64,7 +66,7 @@ main {
   background-color: #ffc107;
   color: #ffffff;
   font-family: 'Open Sans', sans-serif;
-  padding: 1em 8em 1em 1em;
+ /* padding: 1em 8em 1em 1em;*/
   text-align: center;
   font-size: 1.5em;
   font-weight: bold;  
@@ -73,6 +75,10 @@ main {
 .button-enter:hover {
   background-color: #ffd773;
   color: #ffffff;
+}
+
+.button-enter:disabled {
+  background-color: #ccc;
 }
 
 .card-section {
@@ -145,6 +151,22 @@ main {
 
 .read-background-class-change {
 
+}
+
+
+.bookmark-counters {
+  margin: 1em 1em 1em 1em ;
+}
+
+@ media screen and (max-width: ) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-section {
+    width: 900px;
+  }
 }
 
 
