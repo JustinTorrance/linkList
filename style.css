@@ -140,15 +140,21 @@ main {
   margin: 1em 1em 1em 1em ;
 }
 
-.read {
+.read-class-change {
+  color: red;
+}
+
+.card-read-class-change {
+  background-color: #f2f4f4;
+}
+
+/*.read {
   background-color: #f2f4f4;
 }
 
 .read .button-read {
-/*  border: 10px solid;
-  font-style: italic;*/
   color: red;
-}
+}*/
 
 @ media screen and (max-width: ) {
   main {

@@ -17,48 +17,47 @@ enterButton.addEventListener('click', createCard);
 websiteTitleInput.addEventListener('keyup', enableEnter);
 urlInput.addEventListener('keyup', enableEnter);
 
-cardInformation.addEventListener('click', function(event) {
-  var clickedButton = event.target;
-  var article = event.target.parentNode.parentNode;
-  if (clickedButton.className === 'button-read') {
-    article.classList.toggle('read');
-    if (article.classlist.contains('read')) {
-      increaseReadCounter()
-    } else {
-     } decreaseReadCounter()
-  } else if (clickedButton.className === 'button-delete') {
-    article.remove();
-    counter--;
-    decreaseCounter();
-  };
-
-
-
-  console.log(document.querySelectorAll('.read').length)
-
-
-
-//   if (clickedButton.className === 'button-read' && !article.classList.contains('card-read-class-change')) {
-//     clickedButton.classList.add('read-class-change');
-//     article.classList.add('card-read-class-change');
-//     readCounter++;
-//     increaseReadCounter();
-//   } else if (clickedButton.className === 'button-read' && article.classList.contains('card-read-class-change')) {
-//     console.log('yes!')
-//     clickedButton.classList.remove('read-class-change');
-//     article.classList.remove('card-read-class-change');
-//     readCounter--;
-//     decreaseReadCounter()
+// cardInformation.addEventListener('click', function(event) {
+//   var clickedButton = event.target;
+//   var article = event.target.parentNode.parentNode;
+//   if (clickedButton.className === 'button-read') {
+//     article.classList.toggle('read');
+//     if (article.classlist.contains('read')) {
+//       increaseReadCounter()
+//     } else {
+//      } decreaseReadCounter()
 //   } else if (clickedButton.className === 'button-delete') {
-//     if (article.classList.contains('card-read-class-change')) {
-//       readCounter--;
-//       decreaseReadCounter();
-//     } 
 //     article.remove();
 //     counter--;
 //     decreaseCounter();
-// };
-})
+//   };
+
+  // console.log(document.querySelectorAll('.read').length)
+
+cardInformation.addEventListener('click', function(event) {
+  var clickedButton = event.target;
+  var article = event.target.parentNode.parentNode;
+  if (clickedButton.className === 'button-read' && !article.classList.contains('card-read-class-change')) {
+    clickedButton.classList.add('read-class-change');
+    article.classList.add('card-read-class-change');
+    readCounter++;
+    increaseReadCounter();
+  } else if (clickedButton.className === 'button-read' && article.classList.contains('card-read-class-change')) {
+    console.log('yes!')
+    clickedButton.classList.remove('read-class-change');
+    article.classList.remove('card-read-class-change');
+    readCounter--;
+    decreaseReadCounter()
+  } else if (clickedButton.className === 'button-delete') {
+    if (article.classList.contains('card-read-class-change')) {
+      readCounter--;
+      decreaseReadCounter();
+    } 
+    article.remove();
+    counter--;
+    decreaseCounter();
+  }
+});
 
 function enableEnter() {
   var inputLength = (websiteTitleInput.value.length * urlInput.value.length);
