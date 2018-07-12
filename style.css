@@ -6,19 +6,19 @@ body {
   color: #ffffff;
   font-size: 4em;
   text-align: center;
-/*  margin-bottom: 10%;
-  padding: 10%;*/
+  padding: 10% 0 0 0;
 }
 
 .image {
   width: 15%;
-
 }
+
 
 main {
  background-color: #cfd8dc;
  display: flex;
  justify-content: space-evenly;
+ /*display: block;*/
 }
 
 .input-section {
@@ -27,49 +27,53 @@ main {
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
+  /*display: inline-block;*/
 
 } 
 
 .title-section {
   display: flex;
   align-items: center;
-  padding: 1em 1em 1em 1em;
+  
 
 }
 
 .website-title-input {
-  padding: 1em 6em 1em 1em;
+  padding: 1% 40% 1% 1%;
   font-size: 2em;
-
+  margin: 0% 2% 6% 2%;
 }
 
 .url-section {
   display: flex;
+  align-items: center;
 
 }
 
 .url-input {
-  padding: 1em 6em 1em 1em;
+  padding: 1% 40% 1% 1%;
   font-size: 2em;
+  margin: 6% 2%;
 
 }
 
 .enter-button-section {
   display: flex;
-  padding: 0 0 50% 0;
-
+  padding: 0 0 10% 0;
 }
 
 .button-enter {
   background-color: #ffc107;
   color: #ffffff;
   font-family: 'Open Sans', sans-serif;
- /* padding: 1em 8em 1em 1em;*/
-  text-align: center;
   font-size: 1.5em;
-  font-weight: bold;  
+  font-weight: bold; 
+  padding: 0% 40%;
+  margin: 2% 4%;
+}
+
 }
 
 .button-enter:hover {
@@ -86,7 +90,7 @@ main {
   height: 100vh;
   padding: 1em;
   width: 50%;
-
+  display: inline-block;
 }
 
 .card {
@@ -95,7 +99,7 @@ main {
   border-color: #607d8b;
   margin: 0 auto 1em;
   padding: 0em 2em 1em 1.5em;
-  width: 25em;
+  width: 90%;
 }
 
 .card-title-article {
@@ -119,7 +123,6 @@ main {
 .card-url {
   color: #607d8b;
   font-weight: 400;
-
 }
 
 .read-delete-article {
@@ -129,11 +132,15 @@ main {
 .button-read {
   border-radius: none;
   float: left;
+  border: none;
+  border-bottom: .1em solid #cfd8dc;
 
 }
 
 .button-delete {
   float: right;
+  border: none;
+  border-bottom: .1em solid #cfd8dc;
 }
 
 .bookmark-counters {
@@ -142,6 +149,8 @@ main {
 
 .read-class-change {
   color: red;
+  background-color: #455a64;
+  color: white;
 }
 
 .card-read-class-change {
@@ -152,11 +161,23 @@ main {
   background-color: #f2f4f4;
 }
 
+
 .read .button-read {
   color: red;
 }*/
 
 @ media screen and (max-width: ) {
+
+.total-counter{
+  color: white;
+}
+
+.read-counter{
+  color: white;
+}
+
+
+@media screen and (max-width:900px) {
   main {
     display: flex;
     flex-direction: column;
