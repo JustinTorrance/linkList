@@ -124,8 +124,6 @@ main {
 
 .read-delete-article {
   padding: .5em 0em .5em 0em;
-  
-
 }
 
 .button-read {
@@ -136,26 +134,20 @@ main {
 
 .button-delete {
   float: right;
-
 }
-
-.card-read-class-change {
-  background-color: #f2f4f4;
-}
-
-.read-class-change {
-  border: 10px solid;
-  font-style: italic;
-  color: red;
-}
-
-.read-background-class-change {
-
-}
-
 
 .bookmark-counters {
   margin: 1em 1em 1em 1em ;
+}
+
+.read {
+  background-color: #f2f4f4;
+}
+
+.read .button-read {
+/*  border: 10px solid;
+  font-style: italic;*/
+  color: red;
 }
 
 @ media screen and (max-width: ) {
