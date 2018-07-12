@@ -13,7 +13,6 @@ body {
   width: 15%;
 }
 
-
 main {
  background-color: #cfd8dc;
  display: flex;
@@ -129,18 +128,18 @@ main {
   padding: .5em 0em .5em 0em;
 }
 
-.button-read {
+.small-button {
   border-radius: none;
-  float: left;
   border: none;
   border-bottom: .1em solid #cfd8dc;
+}
 
+.button-read {
+  float: left;
 }
 
 .button-delete {
   float: right;
-  border: none;
-  border-bottom: .1em solid #cfd8dc;
 }
 
 .bookmark-counters {
@@ -168,7 +167,7 @@ main {
 
 @ media screen and (max-width: ) {
 
-.total-counter{
+.total-counter {
   color: white;
 }
 

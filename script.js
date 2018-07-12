@@ -28,7 +28,6 @@ urlInput.addEventListener('keyup', enableEnter);
 //      } decreaseReadCounter()
 //   } else if (clickedButton.className === 'button-delete') {
 //     article.remove();
-//     counter--;
 //     decreaseCounter();
 //   };
 
@@ -37,31 +36,26 @@ urlInput.addEventListener('keyup', enableEnter);
 cardInformation.addEventListener('click', function(event) {
   var clickedButton = event.target;
   var article = event.target.parentNode.parentNode;
-  if (clickedButton.className === 'button-read' && !article.classList.contains('card-read-class-change')) {
-    clickedButton.classList.add('read-class-change');
+  if (clickedButton.className === 'read-button' && !article.classList.contains('card-read-class-change')) {
+    clickedButton.classList.add('read');
     article.classList.add('card-read-class-change');
-    readCounter++;
     increaseReadCounter();
-  } else if (clickedButton.className === 'button-read' && article.classList.contains('card-read-class-change')) {
+  } else if (clickedButton.className === 'read-button' && article.classList.contains('card-read-class-change')) {
     console.log('yes!')
-    clickedButton.classList.remove('read-class-change');
+    clickedButton.classList.remove('read');
     article.classList.remove('card-read-class-change');
-    readCounter--;
     decreaseReadCounter()
   } else if (clickedButton.className === 'button-delete') {
     if (article.classList.contains('card-read-class-change')) {
-      readCounter--;
       decreaseReadCounter();
     } 
     article.remove();
-    counter--;
     decreaseCounter();
   }
 });
 
 function enableEnter() {
-  var inputLength = (websiteTitleInput.value.length * urlInput.value.length);
-  if (inputLength === 0) {
+  if (websiteTitleInput.value.length === 0 || urlInput.value.length === 0) {
     enterButton.disabled = true;
   } else {
     enterButton.disabled = false;
@@ -87,16 +81,17 @@ function createCard() {
     </section>
   </section>`);
   cardInformation.appendChild(newCard);
-  counter++; 
   increaseCounter();
 };
 
 
 function increaseCounter() {
+  counter++; 
   bookmarkCounters.innerHTML = (`<p class="total-counter">Bookmarks: ${counter} </p>`);
 }
 
 function decreaseCounter() {
+  counter--;
   bookmarkCounters.innerHTML = (`<p class="total-counter">Bookmarks: ${counter} </p>`);
 }
 
@@ -105,6 +100,7 @@ function increaseReadCounter() {
 }
 
 function decreaseReadCounter() {
+  readCounter--;
   readCounters.innerHTML = (`<p class="read-counter">Read: ${readCounter} </p>`);
 }
 
