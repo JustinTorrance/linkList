@@ -123,13 +123,10 @@ main {
 .card-url {
   color: #607d8b;
   font-weight: 400;
-
 }
 
 .read-delete-article {
   padding: .5em 0em .5em 0em;
-  
-
 }
 
 .button-read {
@@ -144,26 +141,32 @@ main {
   float: right;
   border: none;
   border-bottom: .1em solid #cfd8dc;
+}
 
+.bookmark-counters {
+  margin: 1em 1em 1em 1em ;
+}
+
+.read-class-change {
+  color: red;
+  background-color: #455a64;
+  color: white;
 }
 
 .card-read-class-change {
   background-color: #f2f4f4;
 }
 
-.read-class-change {
-  background-color: #455a64;
-  color: white;
-}
-
-.read-background-class-change {
-
+/*.read {
+  background-color: #f2f4f4;
 }
 
 
-.bookmark-counters {
-  margin: 1em 1em 1em 1em ;
-}
+.read .button-read {
+  color: red;
+}*/
+
+@ media screen and (max-width: ) {
 
 .total-counter{
   color: white;
